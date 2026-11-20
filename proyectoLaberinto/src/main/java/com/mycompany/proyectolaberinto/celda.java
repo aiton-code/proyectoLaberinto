@@ -1,20 +1,26 @@
 package com.mycompany.proyectolaberinto;
 
 public class celda {
- private int columna;
- private int fila;
- private int costo;
- private boolean pared;
+    private int columna;
+    private int fila;
+    private int costo;
+    private boolean pared;
+    private boolean visitada;
 
- public celda(int columna, int fila) {
-  this.columna = columna;
-  this.fila = fila;
-  this.pared = true;
-}
- 
- public void camino(){
-  this.pared = false;
- }
+    public celda(int columna, int fila) {
+        this.columna = columna;
+        this.fila = fila;
+        this.pared = true;
+        this.visitada = false;
+    }
+
+    public void camino() {
+        this.pared = false;
+    }
+
+    public void marcarVisitada() {
+        this.visitada = true;
+    }
 
     public int getColumna() {
         return columna;
@@ -31,6 +37,8 @@ public class celda {
     public boolean isPared() {
         return pared;
     }
- 
- 
+
+    public boolean isVisitada() {
+        return visitada;
+    }
 }

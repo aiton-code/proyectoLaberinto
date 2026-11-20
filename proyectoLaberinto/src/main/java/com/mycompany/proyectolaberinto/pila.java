@@ -1,7 +1,7 @@
 package com.mycompany.proyectolaberinto;
 
 public class pila {
- private Nodo cima;
+    private Nodo cima;
     private int tamanio;
 
     public pila() {
